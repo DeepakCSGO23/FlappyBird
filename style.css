@@ -1,0 +1,86 @@
+*{
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+.game-container{
+    height: 100vh;
+    width: 100vw;
+}
+.sky{
+    height: 700px;
+    background-color: #62767e;
+    position: relative;
+    background-image: url('bg.webp');
+    animation: bganimation 40s linear infinite;
+}
+@keyframes bganimation {
+    from{
+        background-position: 0% 0%;
+    }
+    to{
+        background-position: 100% 100%;
+    }
+}
+.bird{
+    height: 85px;
+    width: 80px;
+    position: absolute;
+    left: 300px;
+    top: 100px;
+    background-image: url('character.png');
+    /* background-image: url('vadivelu-crying.gif'); */
+    background-size: cover;
+}
+.ground{
+    height: 229px;
+    background-color: rgb(24, 18, 18);
+}
+.obstacle{
+    height:300px;
+    width: 100px;
+    position: absolute;
+    right: 0;
+    background-image: url('brick.webp');
+    background-size: 450px 300px;
+    background-position: center;
+}
+.start-message{
+    font-family: fantasy;
+    font-weight: 100;
+    letter-spacing: 5px;
+    position: absolute;
+    top:40%;
+    left:40%;
+    z-index: 100;
+    border-style: solid;
+    padding: 20px;
+    border-radius: 20px;
+}
+#score{
+    font-family: fantasy;
+    font-weight: 100;
+    position: absolute;
+    z-index: 1;
+    letter-spacing: 5px;
+    left: 50%;
+    top: 5%;
+}
+.restart-message{
+    font-family: fantasy;
+    font-weight: 100;
+    position: absolute;
+    z-index: 1;
+    letter-spacing: 5px;
+    left: 35%;
+    top: 100%;
+    border-style: solid;
+    padding: 20px;
+    border-radius: 20px;
+}
+.restart-message:hover{
+    background-color: black;
+    color: gray;
+    transition-duration: .5s;
+    cursor: pointer;
+}
